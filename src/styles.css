@@ -58,3 +58,42 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.topbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.topbar a.active {
+  font-weight: bold;
+}
+
+.sculpture-card {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 6px;
+}
+
+textarea {
+  min-height: 100px;
+}
