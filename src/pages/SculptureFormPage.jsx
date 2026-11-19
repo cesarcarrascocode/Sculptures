@@ -43,12 +43,13 @@ export default function SculptureFormPage() {
       addSculpture(sculpture);
     }
 
-    navigate("/");
+    // Al guardar, volvemos a la página de la operación que se ha realizado.
+    navigate(isEdit ? "/update" : "/read");
   }
 
   return (
     <>
-      <h1>{isEdit ? "Edit sculpture" : "Add sculpture"}</h1>
+      <h1>{isEdit ? "Update sculpture" : "Create sculpture"}</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Name

@@ -65,14 +65,43 @@ button {
   margin-bottom: 20px;
 }
 
+.topbar a {
+  background: #f0f0f0;
+  border: 1px solid #777;
+  border-radius: 4px;
+  color: #222;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
 .topbar a.active {
+  background: #d9eaff;
+  border-color: #2463a3;
   font-weight: bold;
+}
+
+.topbar a:hover {
+  background: #e3e3e3;
 }
 
 .sculpture-card {
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
+}
+
+.sculpture-detail {
+  max-width: 600px;
+}
+
+.sculpture-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sculpture-actions button {
+  margin: 0;
 }
 
 form {

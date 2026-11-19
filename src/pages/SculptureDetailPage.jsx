@@ -18,7 +18,7 @@ export default function SculptureDetailPage() {
       {sculpture.location && <p><strong>Location:</strong> {sculpture.location}</p>}
       <p>{sculpture.description}</p>
       <p><strong>Image description:</strong> {sculpture.alt}</p>
-      <Link to="/">Back to list</Link>
+      <Link to="/read">Back to Read</Link>
     </>
   );
 }
