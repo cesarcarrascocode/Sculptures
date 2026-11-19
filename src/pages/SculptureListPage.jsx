@@ -79,11 +79,12 @@ export default function SculptureListPage() {
             <p><strong>Image description:</strong> {sculpture.alt}</p>
           </article>
           <div className="sculpture-actions">
-            <button onClick={showPreviousSculpture}>Previous</button>
+          
             {/* Next desaparece al llegar a la última obra. */}
             {currentIndex < sculptures.length - 1 && (
               <button onClick={showNextDetail}>Next</button>
             )}
+              <button onClick={showPreviousSculpture}>Back</button>
           </div>
         </>
       )}
