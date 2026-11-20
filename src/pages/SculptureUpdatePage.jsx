@@ -1,7 +1,13 @@
-import { Link, useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 export default function SculptureUpdatePage() {
   const { sculptures } = useOutletContext();
+  const navigate = useNavigate();
+
+  function openEditForm(id) {
+    // Navegamos a la ruta con id para que el formulario cargue esa escultura.
+    navigate(`/update/${id}`);
+  }
 
   return (
     <>
@@ -14,8 +20,10 @@ export default function SculptureUpdatePage() {
           <div>
             <h2>{sculpture.name}</h2>
             <p>{sculpture.artist}</p>
-            {/* Abre el formulario reutilizado con los datos de esta escultura. */}
-            <button to={`/update/${sculpture.id}`}>Edit this sculpture</button>
+            {/* Un botón usa onClick porque la propiedad to solo funciona en un Link. */}
+            <button onClick={() => openEditForm(sculpture.id)}>
+              Edit this sculpture
+            </button>
           </div>
         </article>
       ))}
