@@ -34,11 +34,15 @@ export default function SculptureListPage() {
     // Este botón solo aparece antes de la última obra, por eso podemos sumar uno.
     setCurrentIndex(currentIndex + 1);
   }
-
+/*funcion de like*/
+  function setLike() {
+    setCurrentIndex(currentIndex + 1);
+  }
   return (
     <>
-      <h1>SculptureList Eli & Cesar</h1>
-
+    {/*<header>
+      <h1>Web - SculptureList Eli i Cesar - Java FullStack 2026</h1>
+      </header> */} 
       {/* Al entrar en Read, currentIndex es null y se ve la lista completa. */}
       {!isShowingDetails && (
         <>
@@ -57,6 +61,10 @@ export default function SculptureListPage() {
                 <button onClick={() => setCurrentIndex(index)}>
                   View details
                 </button>
+                {/*button like*/}
+                {currentIndex < sculptures.length - 1 && (
+              <button onClick={() => setLike(index)}>Like</button>
+                )}
               </div>
             </article>
           ))}

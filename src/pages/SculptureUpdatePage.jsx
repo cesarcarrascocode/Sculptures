@@ -15,7 +15,7 @@ export default function SculptureUpdatePage() {
             <h2>{sculpture.name}</h2>
             <p>{sculpture.artist}</p>
             {/* Abre el formulario reutilizado con los datos de esta escultura. */}
-            <Link to={`/update/${sculpture.id}`}>Edit this sculpture</Link>
+            <button to={`/update/${sculpture.id}`}>Edit this sculpture</button>
           </div>
         </article>
       ))}
